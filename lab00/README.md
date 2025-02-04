@@ -55,8 +55,8 @@ Depending on your resources and preferences, consider the following setups:
      ```
 
    - If Conda is not installed (i.e. might not be on your laptop), then follow the guide to install it: 
-   >>>- instructions here (using Anaconda, recommended): [Anaconda installation guide](https://docs.anaconda.com/anaconda/install).
-   >>>- or here (bit more advanced, so try Anaconda first): [Advanced installation guide](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
+       - instructions here (using Anaconda, recommended): [Anaconda installation guide](https://docs.anaconda.com/anaconda/install).
+       - or here (bit more advanced, so try Anaconda first): [Advanced installation guide](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
 
 2. **Creating a Python Environment**
    
