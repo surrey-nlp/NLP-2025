@@ -16,7 +16,7 @@ Depending on your resources and preferences, consider the following setups:
 
 1. **Text Editor and Terminal**
 
-   Using a text editor and a command line terminal to run the python files. This is not recommended, since is counterproductive (and very frustrating).
+   Using a text editor and a command line terminal to run the python files. This is not recommended, since it is counterproductive (and very frustrating).
 
 2. **Integrated Development Environments (IDEs)**
 
@@ -64,7 +64,7 @@ Depending on your resources and preferences, consider the following setups:
    
    You can create environments with the following:
 
-   - Create an environment named `nlp2025` with Python 3.10:
+   - Create an environment named `nlp2025` with Python 3.9:
 
      ```bash
      conda create --name nlp2025 python=3.9
@@ -95,7 +95,7 @@ When working with LLMs, hardware specifications significantly impact performance
 
 2. **Optimizing for Low-Powered Devices**
 
-    Recent research have led to **compact LLMs**, which are designed to run efficiently on low-powered hardware. This is primarily achieved through **quantization**, a technique that reduces the precision of a model’s parameters, thereby decreasing its size and computational requirements. 
+    Recent research have led to **compact LLMs**, which are designed to run efficiently on low-powered hardware. This is primarily achieved through **quantization**, a technique that reduces the precision of a model’s parameters, thereby decreasing its size and computational requirements. You can read more about this [here](https://huggingface.co/docs/optimum/en/concept_guides/quantization), but in essence, you might be able to get some LLMs to run on your local machine if you perform quantization.
 
 3. **Cloud-Based Solutions**
 
