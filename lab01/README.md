@@ -137,10 +137,8 @@ there.
 
 4. **Start a Jupyter Notebook:**
 
-    Start a Jupyter Notebook and open *lab02/lab02.ipynb*
+    Start a Jupyter Notebook and open *lab02/lab02_Tokenization.ipynb*
     - To run the notebook, see instructions here: https://jupyter.readthedocs.io/en/latest/running.html
     - You could also try JupyterLab for a desktop like IDE like experience (if you are not using the Cloud IDE): https://jupyterlab.readthedocs.io/en/stable/getting_started/starting.html
 
 5. Now, just follow the instructions in the notebook.
-
-
