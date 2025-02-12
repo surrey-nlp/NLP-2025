@@ -1,6 +1,6 @@
 # NLP-2025
 This lab module is in correspondence to the theory course module for Natural Language Processing (2025)
-(https://surreylearn.surrey.ac.uk/d2l/home/252945) at University of Surrey.
+(https://surreylearn.surrey.ac.uk/d2l/home/267751) at University of Surrey.
 
 ## Installation/Access of Jupyter Notebook on local (heron) machines
 Please find the [instructions for local installation here](https://github.com/surrey-nlp/NLP-2025/blob/main/NLP-Jupyter_Notebooks_Installation.pdf).
