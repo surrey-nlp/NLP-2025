@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter Sentiment Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f8fa;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1da1f2;
+            text-align: center;
+        }
+        .search-form {
+            text-align: center;
+            margin: 20px 0;
+        }
+        input[type="text"], select {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #1da1f2;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #1da1f2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .results {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .prediction {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .positive {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .negative {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .input-section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .input-toggle {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        #manual-input {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleInput(value) {
+            const manualInput = document.getElementById('manual-input');
+            const exampleSelect = document.getElementById('example-select');
+            
+            if (value === 'manual') {
+                manualInput.style.display = 'block';
+                exampleSelect.style.display = 'none';
+            } else {
+                manualInput.style.display = 'none';
+                exampleSelect.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Twitter Sentiment Analysis</h1>
+        
+        <div class="search-form">
+            <form method="POST">
+                <div class="input-toggle">
+                    <label>
+                        <input type="radio" name="input-type" value="example" checked onclick="toggleInput('example')"> Use Example
+                    </label>
+                    <label>
+                        <input type="radio" name="input-type" value="manual" onclick="toggleInput('manual')"> Manual Input
+                    </label>
+                </div>
+
+                <div id="example-select">
+                    <select name="example_select">
+                        <option value="manual">Select an example tweet...</option>
+                        {% for example in examples %}
+                        <option value="{{ example.text }}">Example {{ example.id }}: {{ example.text[:50] }}...</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div id="manual-input">
+                    <input type="text" name="search" placeholder="Enter text to analyze...">
+                </div>
+
+                <input type="submit" value="Analyze">
+            </form>
+        </div>
+
+        {% if results %}
+        <div class="results">
+            <h3>Analysis Results:</h3>
+            <p><strong>Text analyzed:</strong> {{ results.text }}</p>
+            <div class="prediction {% if results.prediction == 'Positive' %}positive{% else %}negative{% endif %}">
+                Prediction: {{ results.prediction }}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+
